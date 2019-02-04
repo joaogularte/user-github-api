@@ -1,0 +1,20 @@
+{
+  "name": "user-github-api",
+  "version": "1.0.0",
+  "description": "User GitHub api created with Nodejs and others technologies to Shaw and Partners admission test",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jgularte@bitbucket.org/jgularte/user-github-api.git"
+  },
+  "author": "João Vitor Gularte",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/jgularte/user-github-api#readme"
+}
