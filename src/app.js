@@ -19,7 +19,7 @@ app.use(cors());
 app.use(helmet());
 app.use(compression());
 app.use(bodyParser.json({
-    limit: process.env.BODY_LIMIT_SIZE
+  limit: process.env.BODY_LIMIT_SIZE,
 }));
 
 /* Routes declarations */
