@@ -1,0 +1,5 @@
+apps:
+  - script: './index.js'
+    name: 'user-github'
+    exec_mode: 'cluster'
+    instances: 1 
