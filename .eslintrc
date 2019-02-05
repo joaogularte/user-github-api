@@ -1,5 +1,11 @@
 {
     "extends": "airbnb",
+    "globals": {
+        "it": true,
+        "describe": true,
+        "expect": true,
+        "request": true
+    },
     "rules": {
         "prefer-destructuring": ["error", {
             "object": false
