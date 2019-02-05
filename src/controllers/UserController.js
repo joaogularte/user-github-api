@@ -10,7 +10,7 @@ class UserController {
     try {
       const number = req.joi.query.since;
       const users = await UserService.list(number);
-      const nextNumber = users[users.length-1].id;
+      const nextNumber = users[users.length - 1].id;
       res.set('Link', `<http://localhost:3000/api/users?since=${nextNumber}>; rel="next"`);
       res.status(200).send({ success: true, data: users });
     } catch (err) {
