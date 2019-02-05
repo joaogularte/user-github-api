@@ -6,7 +6,7 @@ class UserService {
    */
   static async list(number) {
     const users = await GitHubApi.list(number);
-    return users;
+    return users.data;
   }
 
   /**
@@ -14,11 +14,12 @@ class UserService {
    * if not exists retun null
    */
   static async getUser(username) {
-    const user = await GitHubApi.getUser(username);
-    if (!user.id) {
+    try{
+      const user = await GitHubApi.getUser(username);
+      return user.data;
+    } catch (err) {
       return null;
     }
-    return user;
   }
 
   /**
@@ -26,11 +27,12 @@ class UserService {
    * if not exists return null
    */
   static async getUserRepo(username) {
-    const userRepos = await GitHubApi.getUserRepo(username);
-    if (!userRepos[0]) {
+    try{
+      const userRepos = await GitHubApi.getUserRepo(username);
+      return userRepos.data;
+    } catch (err) {
       return null;
     }
-    return userRepos;
   }
 }
 
