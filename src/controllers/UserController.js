@@ -8,7 +8,7 @@ class UserController {
    */
   static async list(req, res) {
     try {
-      const number = req.query.since;
+      const number = req.joi.query.since;
       const users = await UserService.list(number);
       res.set('Link', '<http://localhost:3000/api/users?since=46>; rel="next"');
       res.status(200).send({ success: true, data: users });
@@ -23,7 +23,7 @@ class UserController {
    */
   static async getUser(req, res) {
     try {
-      const username = req.params.username;
+      const username = req.joi.params.username;
       const user = UserService.getUser(username);
       if (user) {
         res.status(200).send({ success: true, data: user });
@@ -41,7 +41,7 @@ class UserController {
    */
   static async getUserRepo(req, res) {
     try {
-      const username = req.params.username;
+      const username = req.joi.params.username;
       const userRepo = UserService.getUserRepo(username);
       if (userRepo) {
         res.status(200).send({ success: true, data: userRepo });
