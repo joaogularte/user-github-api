@@ -15,10 +15,10 @@ class UserService {
    */
   static async getUser(username) {
     const user = await GitHubApi.getUser(username);
-    if(!user.id){
+    if (!user.id) {
       return null;
     }
-    return user
+    return user;
   }
 
   /**
@@ -27,7 +27,7 @@ class UserService {
    */
   static async getUserRepo(username) {
     const userRepos = await GitHubApi.getUserRepo(username);
-    if(!userRepos[0]){
+    if (!userRepos[0]) {
       return null;
     }
     return userRepos;
