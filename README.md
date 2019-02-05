@@ -20,7 +20,7 @@ GET -> /api/users/:username/repos
 | Body Parsing  | Body Parser |   
 | Versioning  | Git |
 | Schema Validation | Joi |
-| Gzip compression | Compression | 
+| Response body compression | Compression | 
 
 
 ### Installing and running the app with PM2
