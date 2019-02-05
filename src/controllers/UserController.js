@@ -10,7 +10,8 @@ class UserController {
     try {
       const number = req.joi.query.since;
       const users = await UserService.list(number);
-      res.set('Link', '<http://localhost:3000/api/users?since=46>; rel="next"');
+      const nextNumber = users[users.length-1].id;
+      res.set('Link', `<http://localhost:3000/api/users?since=${nextNumber}>; rel="next"`);
       res.status(200).send({ success: true, data: users });
     } catch (err) {
       res.status(500).send(errorResponse);
@@ -24,7 +25,7 @@ class UserController {
   static async getUser(req, res) {
     try {
       const username = req.joi.params.username;
-      const user = UserService.getUser(username);
+      const user = await UserService.getUser(username);
       if (user) {
         res.status(200).send({ success: true, data: user });
       } else {
@@ -42,7 +43,7 @@ class UserController {
   static async getUserRepo(req, res) {
     try {
       const username = req.joi.params.username;
-      const userRepo = UserService.getUserRepo(username);
+      const userRepo = await UserService.getUserRepo(username);
       if (userRepo) {
         res.status(200).send({ success: true, data: userRepo });
       } else {
