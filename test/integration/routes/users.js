@@ -1,6 +1,6 @@
-/* Integration test to users route */
+/* Integration testing to users route */
 describe('Routes Users', () => {
-  /* Test the route GET /api/users?since={number} */
+  /* Testing the route GET /api/users?since={number} */
   describe('Route GET /api/users?since={number}', () => {
     it('should return a list of users', (done) => {
       request
@@ -15,7 +15,7 @@ describe('Routes Users', () => {
     });
   });
 
-  /* Test the route GET /api/users/:username/details */
+  /* Testing the route GET /api/users/:username/details */
   describe('Route GET /api/users/:username/details', () => {
     it('should return user informations', (done) => {
       request
@@ -31,7 +31,7 @@ describe('Routes Users', () => {
     });
   });
 
-  /* Test the route GET /api/users/:username/repos */
+  /* Testing the route GET /api/users/:username/repos */
   describe('Route GET /api/users/:username/repos', () => {
     it('should return user repos', (done) => {
       request
