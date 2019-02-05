@@ -14,6 +14,6 @@ router.get('/', schemaValidator(UserSchema, 'list'), UserController.list);
 router.get('/:username/details', schemaValidator(UserSchema, 'get'), UserController.getUser);
 
 /* GET /api/users/:username/repos */
-router.get('/:username/repos'.schemaValidator(UserSchema, 'get'), UserController.getUserRepo);
+router.get('/:username/repos', schemaValidator(UserSchema, 'get'), UserController.getUserRepo);
 
 module.exports = router;
