@@ -3,7 +3,9 @@
 User GitHub Api created to Shaw and Partners admission test.
 
 GET -> /api/users?since={number}
+
 GET -> /api/users/:username/details
+
 GET -> /api/users/:username/repos
 
 ### Stack
