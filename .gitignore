@@ -1,8 +1,2 @@
-
-#Directories dependencies 
 /node_modules
-
-#File with local environment variables
 .env
-
-
