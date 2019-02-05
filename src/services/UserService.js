@@ -14,7 +14,7 @@ class UserService {
    * if not exists retun null
    */
   static async getUser(username) {
-    try{
+    try {
       const user = await GitHubApi.getUser(username);
       return user.data;
     } catch (err) {
@@ -27,7 +27,7 @@ class UserService {
    * if not exists return null
    */
   static async getUserRepo(username) {
-    try{
+    try {
       const userRepos = await GitHubApi.getUserRepo(username);
       return userRepos.data;
     } catch (err) {
