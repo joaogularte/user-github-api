@@ -1,6 +1,6 @@
 # user-github-api
 
-User GitHub Api created to Shaw and Partners admission test.
+User GitHub Api created with GitHub API.
 
 GET -> /api/users?since={number}
 
