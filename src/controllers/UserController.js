@@ -11,7 +11,7 @@ class UserController {
       const number = req.joi.query.since;
       const users = await UserService.list(number);
       const nextNumber = users[users.length - 1].id;
-      res.set('Link', `<https://user-github-api.herokuapp.com/api/users?since=${nextNumber}>; rel="next"`);
+      res.set('Link', `<http://localhost:${process.env.PORT}/api/users?since=${nextNumber}>; rel="next"`);
       res.status(200).send({ success: true, data: users });
     } catch (err) {
       res.status(500).send(errorResponse);
